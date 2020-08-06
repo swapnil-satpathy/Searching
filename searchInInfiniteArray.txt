@@ -1,0 +1,13 @@
+Given an Infinite Sized Sorted Array and an element x , find if x is present in the array or not...
+
+if(arr[0]==x)return 0;
+int i=1;
+while(arr[i]<x)
+    i=i*2 // 0(logn)
+if(arr[i]==x)
+    return i;
+else
+{
+    // As now you have got an upper limit to the element
+    return binary_search(arr,i/2,i,x);
+}
